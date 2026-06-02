@@ -1,8 +1,8 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hajar Alharthi — HCI Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -11,79 +11,82 @@
 
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        serif: ['Cormorant Garamond', 'serif'],
-      },
-      colors: {
-        dark: '#161414',
-        dark2: '#1D1A1A',
-        gold: '#C9A46A',
-        cream: '#F2EEE8'
-      }
-    }
-  }
+theme: {
+extend: {
+fontFamily: {
+serif: ['Cormorant Garamond', 'serif'],
+},
+colors: {
+dark: '#000000',
+gold: '#C9A46A',
+cream: '#F5F1EA'
+}
+}
+}
 }
 </script>
 
 <style>
-html { scroll-behavior: smooth; }
-
-body {
-  background: #161414;
-  color: #F2EEE8;
-  font-family: 'Cormorant Garamond', serif;
+html{
+scroll-behavior:smooth;
 }
 
-.nav-link, .btn, .card {
-  transition: 0.3s ease;
+body{
+background:#000000;
+color:#F5F1EA;
+font-family:'Cormorant Garamond', serif;
 }
 
-.nav-link:hover {
-  color: #C9A46A;
+.nav-link,
+.btn,
+.card{
+transition:.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #C9A46A;
+.nav-link:hover{
+color:#C9A46A;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  background: #C9A46A;
-  color: #161414;
+.card:hover{
+transform:translateY(-4px);
+border-color:#C9A46A;
 }
 
-.hero-title {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
+.btn:hover{
+transform:translateY(-2px);
+background:#C9A46A;
+color:#000000;
 }
 
-.section-title {
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.hero-title{
+font-weight:700;
+letter-spacing:.5px;
+line-height:1;
 }
 
-.accent-text {
-  font-style: italic;
-  font-weight: 600;
+.section-title{
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.accent-text{
+font-style:italic;
+font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<header class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur-md border-b border-cream/10">
+<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
 <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<a href="#home" class="text-xl font-bold tracking-wide">
+<a href="#home" class="text-xl font-bold">
 Hajar<span class="text-gold">Alharthi</span>.
 </a>
 
-<ul class="hidden md:flex gap-9 text-lg text-cream/80">
+<ul class="hidden md:flex gap-8 text-base text-cream/80">
 <li><a href="#about" class="nav-link">About</a></li>
 <li><a href="#projects" class="nav-link">Projects</a></li>
 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -92,31 +95,32 @@ Hajar<span class="text-gold">Alharthi</span>.
 </nav>
 </header>
 
-<section id="home" class="min-h-screen flex items-center px-6 pt-24 bg-dark">
-<div class="max-w-6xl mx-auto w-full">
+<section id="home" class="min-h-screen flex items-center px-6 pt-24">
+<div class="max-w-5xl mx-auto w-full">
 
-<p class="accent-text text-xl md:text-2xl text-gold mb-5">
+<p class="accent-text text-xl text-gold mb-5">
 Human-Computer Interaction Student
 </p>
 
-<h1 class="hero-title text-5xl md:text-7xl text-cream mb-7">
+<h1 class="hero-title text-5xl md:text-7xl text-cream mb-6">
 HAJAR <span class="text-gold">ALTHARTHI</span>
 </h1>
 
-<p class="text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed mb-9">
+<p class="text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed mb-8">
 A Human-Computer Interaction student passionate about user-centered design,
 usability testing, UX research, and meaningful digital experiences.
 </p>
 
-<a href="#projects" class="btn inline-block border border-gold text-gold px-7 py-3 rounded-full text-base font-semibold">
+<a href="#projects"
+class="btn inline-block border border-gold text-gold px-6 py-3 rounded-full text-base font-semibold">
 View My Work
 </a>
 
 </div>
 </section>
 
-<section id="about" class="py-24 px-6 bg-dark2">
-<div class="max-w-6xl mx-auto">
+<section id="about" class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
 
 <div class="grid md:grid-cols-[0.9fr_2px_2fr] gap-8 items-start">
 
@@ -126,30 +130,31 @@ ABOUT<br>ME
 </h2>
 </div>
 
-<div class="hidden md:block w-[2px] h-full bg-cream/60"></div>
+<div class="hidden md:block w-[2px] h-full bg-white/30"></div>
 
 <div>
+
 <p class="text-xl text-cream leading-relaxed mb-5 font-semibold">
 I am a motivated Human-Computer Interaction student at Umm Al-Qura University
-with a strong interest in user-centered design, usability testing, problem
-solving, and UX research.
+with a strong interest in user-centered design, usability testing,
+problem solving, and UX research.
 </p>
 
 <p class="text-xl text-cream/90 leading-relaxed font-semibold">
 I aim to create simple, useful, and meaningful digital experiences by combining
 research, analysis, and design thinking.
 </p>
-</div>
 
 </div>
+</div>
 
-<div class="card mt-14 bg-dark border border-cream/10 rounded-3xl p-7 md:p-9">
+<div class="card mt-14 border border-white/10 rounded-3xl p-8">
 
 <h3 class="section-title text-2xl text-gold mb-6">
 CORE SKILLS
 </h3>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-cream/90 text-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-cream/90">
 <p>• Human-Computer Interaction</p>
 <p>• Usability Testing</p>
 <p>• UX Research</p>
@@ -165,28 +170,30 @@ CORE SKILLS
 </div>
 </section>
 
-<section id="projects" class="py-24 px-6 bg-dark">
-<div class="max-w-6xl mx-auto">
+<section id="projects" class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
 
-<h2 class="section-title text-4xl md:text-5xl text-gold mb-9">
+<h2 class="section-title text-4xl md:text-5xl text-gold mb-8">
 SELECTED WORK
 </h2>
 
-<div class="card bg-dark2 border border-cream/10 rounded-3xl p-9 text-center">
+<div class="card border border-white/10 rounded-3xl p-8 text-center">
+
 <h3 class="section-title text-3xl text-cream mb-4">
- COMING SOON
+COMING SOON
 </h3>
 
-<p class="text-cream/80 text-lg">
+<p class="text-lg text-cream/80">
 HCI and UX case studies will be added soon.
 </p>
+
 </div>
 
 </div>
 </section>
 
-<section id="contact" class="py-24 px-6 bg-dark2">
-<div class="max-w-6xl mx-auto">
+<section id="contact" class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
 
 <div class="grid md:grid-cols-[0.9fr_2px_2fr] gap-8 items-start">
 
@@ -196,30 +203,36 @@ CONTACT
 </h2>
 </div>
 
-<div class="hidden md:block w-[2px] h-full bg-cream/60"></div>
+<div class="hidden md:block w-[2px] h-full bg-white/30"></div>
 
 <div>
+
 <p class="text-xl text-cream leading-relaxed mb-7 font-semibold">
-Feel free to reach out for collaboration, training opportunities, or HCI-related projects.
+Feel free to reach out for collaboration, training opportunities,
+or HCI-related projects.
 </p>
 
 <p class="text-lg mb-3">
 Email:
-<a href="mailto:hajiralharthi1@gmail.com" class="text-gold hover:underline">
+<a href="mailto:hajiralharthi1@gmail.com"
+class="text-gold hover:underline">
 hajiralharthi1@gmail.com
 </a>
 </p>
 
 <p class="text-lg mb-3">
 LinkedIn:
-<a href="https://linkedin.com/in/hajar-alharthi" target="_blank" class="text-gold hover:underline">
+<a href="https://linkedin.com/in/hajar-alharthi"
+target="_blank"
+class="text-gold hover:underline">
 linkedin.com/in/hajar-alharthi
 </a>
 </p>
 
 <p class="text-lg mb-3">
 Phone:
-<a href="tel:+966565047783" class="text-gold hover:underline">
+<a href="tel:+966565047783"
+class="text-gold hover:underline">
 +966 56 504 7783
 </a>
 </p>
@@ -227,14 +240,14 @@ Phone:
 <p class="text-lg text-cream/80">
 Makkah, Saudi Arabia
 </p>
-</div>
 
+</div>
 </div>
 
 </div>
 </section>
 
-<footer class="bg-dark border-t border-cream/10 py-7 text-center text-cream/50 text-base">
+<footer class="border-t border-white/10 py-6 text-center text-cream/50 text-sm">
 © 2026 Hajar Alharthi. All rights reserved.
 </footer>
 
