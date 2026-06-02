@@ -4,45 +4,49 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Hajar Alharthi — HCI Portfolio</title>
+
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Sora', 'sans-serif'] },
-      colors: {
-        accent: {
-          DEFAULT: '#FF5A1F',
-          hover: '#E64A0F',
-        },
-        navy: '#030303',
-        navy2: '#0b0b0b'
+      fontFamily: {
+        sans: ['Manrope', 'sans-serif'],
+        display: ['Anton', 'sans-serif'],
+        serifItalic: ['Playfair Display', 'serif'],
       },
-    },
-  },
-};
+      colors: {
+        dark: '#030407',
+        dark2: '#070A10',
+        navy: '#0B1020',
+        accent: '#FF5A1F'
+      }
+    }
+  }
+}
 </script>
 
 <style>
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; }
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+.card { transition: .3s ease; }
+.card:hover { transform: translateY(-6px); border-color:#FF5A1F; }
+.btn { transition:.3s ease; }
+.btn:hover { transform: translateY(-3px); }
 </style>
 </head>
 
-<body class="bg-navy text-white antialiased">
+<body class="bg-dark text-white font-sans">
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-md border-b border-white/10">
-<nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-<a href="#home" class="text-xl font-bold tracking-tight">
+<header class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur border-b border-white/10">
+<nav class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+<a href="#home" class="text-xl font-extrabold tracking-wide">
 Hajar<span class="text-accent">Alharthi</span>.
 </a>
 
-<ul class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
+<ul class="hidden md:flex gap-10 text-sm text-gray-300">
 <li><a href="#about" class="hover:text-accent">About</a></li>
 <li><a href="#projects" class="hover:text-accent">Projects</a></li>
 <li><a href="#contact" class="hover:text-accent">Contact</a></li>
@@ -50,33 +54,36 @@ Hajar<span class="text-accent">Alharthi</span>.
 </nav>
 </header>
 
-<section id="home" class="min-h-screen flex items-center px-6 pt-20 bg-navy">
-<div class="max-w-6xl mx-auto w-full">
-<p class="text-accent text-sm md:text-base font-medium tracking-widest uppercase mb-6 fade-in">
-HCI Portfolio · 2026
+<section id="home" class="min-h-screen flex items-center px-6 pt-24 bg-dark">
+<div class="max-w-6xl mx-auto">
+
+<p class="font-serifItalic text-2xl text-gray-300 mb-5">
+Human-Computer Interaction Portfolio
 </p>
 
-<h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-6 fade-in">
-Hi, I'm <span class="text-accent">Hajar Alharthi</span>.
+<h1 class="font-display text-7xl md:text-9xl leading-none tracking-wide mb-6">
+HAJAR <span class="text-accent">ALTHARTHI</span>
 </h1>
 
-<p class="text-lg md:text-2xl text-gray-300 max-w-2xl mb-10 fade-in">
+<p class="text-lg md:text-2xl text-gray-300 max-w-2xl leading-relaxed mb-10">
 A Human-Computer Interaction student passionate about user-centered design,
 usability testing, UX research, and meaningful digital experiences.
 </p>
 
-<a href="#projects" class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-accent-hover transition-all">
+<a href="#projects" class="btn inline-block bg-accent text-white px-8 py-4 rounded-full font-bold">
 View My Work
 </a>
+
 </div>
 </section>
 
-<section id="about" class="py-24 md:py-32 px-6 bg-navy2">
-<div class="max-w-4xl mx-auto">
-<p class="text-accent text-sm font-medium tracking-widest uppercase mb-4 fade-in">About</p>
-<h2 class="text-4xl md:text-5xl font-bold mb-10 fade-in">A little about me.</h2>
+<section id="about" class="py-28 px-6 bg-dark2">
+<div class="max-w-5xl mx-auto">
 
-<div class="fade-in bg-navy rounded-2xl p-8 border border-white/10">
+<p class="font-serifItalic text-2xl text-gray-300 mb-3">About me</p>
+<h2 class="font-display text-5xl md:text-7xl text-accent mb-10">ABOUT</h2>
+
+<div class="card bg-dark border border-white/10 rounded-3xl p-8 md:p-10">
 <p class="text-gray-300 text-lg leading-relaxed mb-6">
 I am a motivated Human-Computer Interaction student at Umm Al-Qura University
 with a strong interest in user-centered design, usability, problem solving,
@@ -88,73 +95,64 @@ I aim to create simple, useful, and meaningful digital experiences by combining
 research, analysis, and design thinking.
 </p>
 
-<h3 class="text-sm font-semibold tracking-widest uppercase text-gray-400 mb-4">Core Skills</h3>
+<h3 class="text-accent font-bold tracking-widest uppercase mb-5">Core Skills</h3>
 
-<ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-200">
-<li>• Human-Computer Interaction</li>
-<li>• Usability Testing</li>
-<li>• UX Research</li>
-<li>• User-Centered Design</li>
-<li>• Problem Solving</li>
-<li>• Strategic Thinking</li>
-<li>• Communication Skills</li>
-<li>• Presentation Skills</li>
-</ul>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-200">
+<p>• Human-Computer Interaction</p>
+<p>• Usability Testing</p>
+<p>• UX Research</p>
+<p>• User-Centered Design</p>
+<p>• Problem Solving</p>
+<p>• Strategic Thinking</p>
+<p>• Communication Skills</p>
+<p>• Presentation Skills</p>
 </div>
+</div>
+
 </div>
 </section>
 
-<section id="projects" class="py-24 md:py-32 px-6 bg-navy">
+<section id="projects" class="py-28 px-6 bg-dark">
 <div class="max-w-6xl mx-auto">
-<p class="text-accent text-sm font-medium tracking-widest uppercase mb-4 fade-in">Projects</p>
-<h2 class="text-4xl md:text-5xl font-bold mb-10 fade-in">Selected work.</h2>
 
-<div class="fade-in bg-navy2 rounded-2xl p-10 border border-white/10 text-center">
-<h3 class="text-2xl font-semibold mb-4 text-accent">Projects Coming Soon</h3>
+<p class="font-serifItalic text-2xl text-gray-300 mb-3">Selected work</p>
+<h2 class="font-display text-5xl md:text-7xl text-accent mb-10">PROJECTS</h2>
+
+<div class="card bg-dark2 border border-white/10 rounded-3xl p-10 text-center">
+<h3 class="font-display text-4xl text-white mb-4">COMING SOON</h3>
 <p class="text-gray-300 text-lg">
 HCI and UX case studies will be added soon.
 </p>
 </div>
- </div>
-</section>
 
-<section id="contact" class="py-24 md:py-32 px-6 bg-navy2">
-<div class="max-w-2xl mx-auto text-center">
-<p class="text-accent text-sm font-medium tracking-widest uppercase mb-4 fade-in">Contact</p>
-<h2 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Let's connect.</h2>
-
-<p class="text-gray-300 text-lg mb-8 fade-in">
-Feel free to reach out for collaboration, training opportunities, or HCI-related projects.
-</p>
-
-<p class="text-gray-200 text-lg">
-📧 <a href="mailto:hajiralharthi1@gmail.com" class="text-accent hover:underline">hajiralharthi1@gmail.com</a>
-</p>
-
-<p class="text-gray-200 text-lg mt-3">
-🔗 <a href="https://linkedin.com/in/hajar-alharthi" target="_blank" class="text-accent hover:underline">linkedin.com/in/hajar-alharthi</a>
-</p>
-
-<p class="text-gray-200 text-lg mt-3">📍 Makkah, Saudi Arabia</p>
 </div>
 </section>
 
-<footer class="border-t border-white/10 py-8 px-6 text-center text-sm text-gray-400 bg-navy">
-<p>&copy; 2026 Hajar Alharthi. All rights reserved.</p>
+<section id="contact" class="py-28 px-6 bg-dark2">
+<div class="max-w-3xl mx-auto text-center">
+<p class="font-serifItalic text-2xl text-gray-300 mb-3">Get in touch</p>
+<h2 class="font-display text-5xl md:text-7xl text-accent mb-8">CONTACT</h2>
+
+<p class="text-gray-300 text-lg mb-8">
+Feel free to reach out for collaboration, training opportunities, or HCI-related projects.
+</p>
+
+<p class="text-lg mb-3">
+📧 <a href="mailto:hajiralharthi1@gmail.com" class="text-accent hover:underline">hajiralharthi1@gmail.com</a>
+</p>
+
+<p class="text-lg mb-3">
+🔗 <a href="https://linkedin.com/in/hajar-alharthi" target="_blank" class="text-accent hover:underline">linkedin.com/in/hajar-alharthi</a>
+</p>
+
+<p class="text-lg text-gray-300">📍 Makkah, Saudi Arabia</p>
+
+</div>
+</section>
+
+<footer class="bg-dark border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+© 2026 Hajar Alharthi. All rights reserved.
 </footer>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-observer.unobserve(entry.target);
-}
-});
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
