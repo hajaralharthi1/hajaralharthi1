@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hajar Alharthi — HCI Student </title>
+<title>Hajar Alharthi — HCI Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -74,6 +74,37 @@ text-transform:uppercase;
 font-style:italic;
 font-weight:600;
 }
+
+.skill-pill {
+border: 1px solid rgba(245, 241, 234, 0.2);
+padding: 8px 22px;
+border-radius: 50px;
+font-size: 1.125rem;
+color: rgba(245, 241, 234, 0.9);
+transition: all 0.3s ease;
+cursor: default;
+background: rgba(255, 255, 255, 0.02);
+}
+
+.skill-pill:hover {
+border-color: #C9A46A;
+color: #000000;
+background: #C9A46A;
+transform: translateY(-4px);
+box-shadow: 0 6px 15px rgba(201, 164, 106, 0.15);
+}
+
+.fade-in-section {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
 </style>
 </head>
 
@@ -95,7 +126,7 @@ Hajar<span class="text-gold">Alharthi</span>.
 </nav>
 </header>
 
-<section id="home" class="min-h-screen flex items-center px-6 pt-24">
+<section id="home" class="min-h-screen flex items-center px-6 pt-24 fade-in-section">
 <div class="max-w-5xl mx-auto w-full">
 
 <p class="accent-text text-xl text-gold mb-5">
@@ -103,7 +134,7 @@ Human-Computer Interaction Student
 </p>
 
 <h1 class="hero-title text-5xl md:text-7xl text-cream mb-6">
-HAJAR <span class="text-gold">ALTHARTHI</span>
+HAJAR <span class="text-gold">ALHARTHI</span>
 </h1>
 
 <p class="text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed mb-8">
@@ -111,15 +142,14 @@ A Human-Computer Interaction student passionate about user-centered design,
 usability testing, UX research, and meaningful digital experiences.
 </p>
 
-<a href="#projects"
-class="btn inline-block border border-gold text-gold px-6 py-3 rounded-full text-base font-semibold">
+<a href="#projects" class="btn inline-block border border-gold text-gold px-6 py-3 rounded-full text-base font-semibold">
 View My Work
 </a>
 
 </div>
 </section>
 
-<section id="about" class="py-24 px-6">
+<section id="about" class="py-24 px-6 fade-in-section">
 <div class="max-w-5xl mx-auto">
 
 <div class="grid md:grid-cols-[0.9fr_2px_2fr] gap-8 items-start">
@@ -154,15 +184,15 @@ research, analysis, and design thinking.
 CORE SKILLS
 </h3>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-cream/90">
-<p>• Human-Computer Interaction</p>
-<p>• Usability Testing</p>
-<p>• UX Research</p>
-<p>• User-Centered Design</p>
-<p>• Problem Solving</p>
-<p>• Strategic Thinking</p>
-<p>• Communication Skills</p>
-<p>• Presentation Skills</p>
+<div class="flex flex-wrap gap-3 mt-2">
+<span class="skill-pill">Human-Computer Interaction</span>
+<span class="skill-pill">Usability Testing</span>
+<span class="skill-pill">UX Research</span>
+<span class="skill-pill">User-Centered Design</span>
+<span class="skill-pill">Problem Solving</span>
+<span class="skill-pill">Strategic Thinking</span>
+<span class="skill-pill">Communication Skills</span>
+<span class="skill-pill">Presentation Skills</span>
 </div>
 
 </div>
@@ -170,7 +200,7 @@ CORE SKILLS
 </div>
 </section>
 
-<section id="projects" class="py-24 px-6">
+<section id="projects" class="py-24 px-6 fade-in-section">
 <div class="max-w-5xl mx-auto">
 
 <h2 class="section-title text-4xl md:text-5xl text-gold mb-8">
@@ -192,7 +222,7 @@ HCI and UX case studies will be added soon.
 </div>
 </section>
 
-<section id="contact" class="py-24 px-6">
+<section id="contact" class="py-24 px-6 fade-in-section">
 <div class="max-w-5xl mx-auto">
 
 <div class="grid md:grid-cols-[0.9fr_2px_2fr] gap-8 items-start">
@@ -214,25 +244,21 @@ or HCI-related projects.
 
 <p class="text-lg mb-3">
 Email:
-<a href="mailto:hajiralharthi1@gmail.com"
-class="text-gold hover:underline">
+<a href="mailto:hajiralharthi1@gmail.com" class="text-gold hover:underline">
 hajiralharthi1@gmail.com
 </a>
 </p>
 
 <p class="text-lg mb-3">
 LinkedIn:
-<a href="https://linkedin.com/in/hajar-alharthi"
-target="_blank"
-class="text-gold hover:underline">
+<a href="https://linkedin.com/in/hajar-alharthi" target="_blank" class="text-gold hover:underline">
 linkedin.com/in/hajar-alharthi
 </a>
 </p>
 
 <p class="text-lg mb-3">
 Phone:
-<a href="tel:+966565047783"
-class="text-gold hover:underline">
+<a href="tel:+966565047783" class="text-gold hover:underline">
 +966 56 504 7783
 </a>
 </p>
@@ -250,6 +276,22 @@ Makkah, Saudi Arabia
 <footer class="border-t border-white/10 py-6 text-center text-cream/50 text-sm">
 © 2026 Hajar Alharthi. All rights reserved.
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('is-visible');
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.1 });
+
+const hiddenElements = document.querySelectorAll('.fade-in-section');
+hiddenElements.forEach((el) => observer.observe(el));
+});
+</script>
 
 </body>
 </html>
